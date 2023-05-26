@@ -73,7 +73,7 @@ body{
 
 .footer{
 	background-color: rgb(66, 112, 172);
-	padding: 50px 0 50;
+	padding: 50px 0px 50px;
 	color: #fff;
 
 }
@@ -141,10 +141,33 @@ body{
 
 }
 
+
+
 .swiper-wrapper{
 	background-color: rgba(14, 6, 235, .3);
 }
 
 .swiper-slide{
+	background-repeat: no-repeat;
+	block-size: cover;
+	background-position: center;
 	height: 100vh;
+}
+
+.swiper-pagination-bullet {
+ width: 120px;
+ height: 3px;
+ background-color: rgb(66, 112, 172);
+ border-radius: 0;
+ opacity: 1;
+ margin: 0 15px !important;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+	bottom: 50px;
+}
+
+.swiper-pagination-bullet-active {
+ height: 6px;
+ background-color: #fff;
 }
