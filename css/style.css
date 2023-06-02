@@ -20,6 +20,13 @@ a{
 	color: inherit;
 }
 
+.section-title{
+	margin-bottom: 50px;
+	font-size: 48px;
+	font-weight: 700;
+	text-align: center;
+}
+
 .wrapper{
 	min-height: 100%;
 	display: flex;
@@ -141,8 +148,6 @@ body{
 
 }
 
-
-
 .swiper-wrapper{
 	background-color: rgba(14, 6, 235, .3);
 }
@@ -170,4 +175,81 @@ body{
 .swiper-pagination-bullet-active {
  height: 6px;
  background-color: #fff;
+}
+
+.about{
+	padding: 150px 0;
+}
+
+.about__list{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 60px;
+	text-align: center;
+}
+
+.about__item-img{
+	margin-bottom: 30px;
+}
+
+.about__item-title{
+margin-bottom: 30px;
+font-size: 24px;
+font-weight: 700;
+}
+
+.about__item-text{
+	text-align: left;
+}
+
+.own-hands{
+	padding-bottom: 150px;
+}
+
+.own-hands__inner{
+ max-width: 600px;
+ margin: 0 auto;
+}
+
+.own__hands-title{
+	font-size: 24px;
+	font-weight: 700;
+	padding-top: 50px;
+}
+
+.own__hands-list{
+	padding: 50px 0 70px;
+	counter-reset: myCounter;
+}
+
+.own__hands-item{
+	list-style-type: none;
+	width: 270px;
+	position: relative;
+	margin-left: auto;
+	box-sizing: content-box;
+	padding: 19px 0 19px 240px;
+	min-height: 63px;
+}
+
+.own__hands-item + .own__hands-item{
+	margin-top: 40px;
+}
+
+.own__hands-item::before{
+	counter-increment: myCounter;
+	content: counter(myCounter);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(66, 112, 172);
+	font-size: 48px;
+	font-weight: 700;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
