@@ -196,6 +196,7 @@ body{
 margin-bottom: 30px;
 font-size: 24px;
 font-weight: 700;
+color: rgb(66, 112, 172);
 }
 
 .about__item-text{
@@ -203,6 +204,7 @@ font-weight: 700;
 }
 
 .own-hands{
+	padding-top: 50px;
 	padding-bottom: 150px;
 }
 
@@ -211,10 +213,17 @@ font-weight: 700;
  margin: 0 auto;
 }
 
+.own-hands__inner-img{
+	margin: 0 auto;
+	padding-bottom: 50px;
+	display: block;
+}
+
 .own__hands-title{
 	font-size: 24px;
 	font-weight: 700;
 	padding-top: 50px;
+	padding-bottom: 10px;
 }
 
 .own__hands-list{
