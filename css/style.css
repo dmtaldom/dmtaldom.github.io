@@ -142,8 +142,8 @@ body{
 .top__link{
 	background-color: rgb(14, 6, 235, 0.3);
 	border-radius: 5px;
-	padding: 23px;
-	max-width: 430px;
+	padding: 3px;
+	max-width: 390px;
 	display: inline-block;
 	text-transform: uppercase;
 	font-size: 36px;
