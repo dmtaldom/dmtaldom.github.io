@@ -238,11 +238,11 @@ color: rgb(66, 112, 172);
 
 .own__hands-item{
 	list-style-type: none;
-	width: 270px;
+	width: 390px;
 	position: relative;
 	margin-left: auto;
 	box-sizing: content-box;
-	padding: 19px 0 19px 240px;
+	padding: 19px 0 19px 150px;
 	min-height: 63px;
 }
 
