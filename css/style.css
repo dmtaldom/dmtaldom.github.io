@@ -245,6 +245,9 @@ color: rgb(66, 112, 172);
 	padding: 19px 0 19px 150px;
 	min-height: 63px;
 }
+.own__hands-link{
+	text-shadow: rgb(66, 112, 172) 1px 0 10px;
+}
 
 .own__hands-item + .own__hands-item{
 	margin-top: 40px;
