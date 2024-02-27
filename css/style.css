@@ -334,4 +334,10 @@ color: rgb(66, 112, 172);
 	.about__list{
 		grid-template-columns: repeat(1, 1fr);
 	}
+	.footer__copy{
+		min-width: 300px;
+	}
+	.own__hands-item{
+		width: 300px;
+	}
 }
