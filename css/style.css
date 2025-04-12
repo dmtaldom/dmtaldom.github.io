@@ -278,6 +278,25 @@ color: rgb(66, 112, 172);
 .contacts__title{
 	margin-bottom: 20px;
 }
+.contacts__call{
+	background-color: rgb(14, 6, 235, 0.3);
+	border-radius: 5px;
+	padding: 3px;
+	max-width: 590px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: 700;
+}
+.contacts__chat{
+	background-color: rgba(6, 235, 63, 0.3);
+	border-radius: 5px;
+	padding: 3px;
+	max-width: 590px;
+	display: inline-block;
+	font-size: 36px;
+	font-weight: 700;
+}
 
 .contacts__text{
 	text-align: center;
