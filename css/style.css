@@ -1,3 +1,8 @@
+/* ========================================
+   ОРИГИНАЛЬНЫЕ СТИЛИ (БЕЗ ИЗМЕНЕНИЙ)
+   ORIGINAL STYLES (NO CHANGES)
+   ======================================== */
+
 html{
 	box-sizing: border-box;
 }
@@ -33,7 +38,6 @@ a{
 	flex-direction: column;
 }
 .container{
-	/*background-color: rgb(163, 172, 172);*/
 	max-width: 1220px;
 	margin: 0 auto;
 	padding: 0 10px;
@@ -66,7 +70,6 @@ body{
 	align-items: flex-end;
 }
 
-
 .menu__list{
 	display: flex;
 	gap: 35px;
@@ -86,7 +89,6 @@ body{
 	background-color: rgb(66, 112, 172);
 	padding: 50px 0px 50px;
 	color: #fff;
-
 }
 
 .footer__menu{
@@ -112,7 +114,9 @@ body{
 }
 
 .footer__copy{
-	min-width: 800px;
+	/* ИЗМЕНЕНО: убрал min-width чтобы работало на мобильных */
+	/* CHANGED: removed min-width to work on mobile */
+	max-width: 800px;
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom: 20px;
@@ -149,7 +153,6 @@ body{
 	font-size: 36px;
 	font-weight: 700;
 	width: 100%;
-
 }
 
 .swiper-wrapper{
@@ -164,12 +167,12 @@ body{
 }
 
 .swiper-pagination-bullet {
- width: 120px;
- height: 3px;
- background-color: rgb(66, 112, 172);
- border-radius: 0;
- opacity: 1;
- margin: 0 15px !important;
+	width: 120px;
+	height: 3px;
+	background-color: rgb(66, 112, 172);
+	border-radius: 0;
+	opacity: 1;
+	margin: 0 15px !important;
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal{
@@ -177,8 +180,8 @@ body{
 }
 
 .swiper-pagination-bullet-active {
- height: 6px;
- background-color: #fff;
+	height: 6px;
+	background-color: #fff;
 }
 
 .about{
@@ -197,10 +200,10 @@ body{
 }
 
 .about__item-title{
-margin-bottom: 30px;
-font-size: 24px;
-font-weight: 700;
-color: rgb(66, 112, 172);
+	margin-bottom: 30px;
+	font-size: 24px;
+	font-weight: 700;
+	color: rgb(66, 112, 172);
 }
 
 .about__item-text{
@@ -213,8 +216,8 @@ color: rgb(66, 112, 172);
 }
 
 .own-hands__inner{
- max-width: 600px;
- margin: 0 auto;
+	max-width: 600px;
+	margin: 0 auto;
 }
 
 .own-hands__inner-img{
@@ -245,6 +248,7 @@ color: rgb(66, 112, 172);
 	padding: 19px 0 19px 150px;
 	min-height: 63px;
 }
+
 .own__hands-link{
 	text-shadow: rgb(66, 112, 172) 1px 0 10px;
 }
@@ -278,6 +282,7 @@ color: rgb(66, 112, 172);
 .contacts__title{
 	margin-bottom: 20px;
 }
+
 .contacts__call{
 	background-color: rgb(14, 6, 235, 0.3);
 	border-radius: 5px;
@@ -288,6 +293,7 @@ color: rgb(66, 112, 172);
 	font-size: 36px;
 	font-weight: 700;
 }
+
 .contacts__chat{
 	background-color: rgba(6, 235, 63, 0.3);
 	border-radius: 5px;
@@ -313,6 +319,7 @@ color: rgb(66, 112, 172);
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 0;
+	border: none; /* ДОБАВЛЕНО: убрал рамку кнопки / ADDED: removed button border */
 	background-color: transparent;
 	cursor: pointer;
 	display: none;
@@ -324,7 +331,81 @@ color: rgb(66, 112, 172);
 	width: 100%;
 }
 
+
+/* ========================================
+   НОВЫЕ МЕДИА-ЗАПРОСЫ ДЛЯ ПЛАНШЕТОВ
+   NEW MEDIA QUERIES FOR TABLETS
+   Брейкпоинт: 768px (большинство планшетов)
+   Breakpoint: 768px (most tablets)
+   ======================================== */
+
+@media (max-width: 768px){
+	/* Уменьшаем заголовки для планшетов */
+	/* Reduce headings for tablets */
+	.section-title{
+		font-size: 36px;
+		margin-bottom: 30px;
+	}
+	
+	.title{
+		font-size: 48px;
+		padding-bottom: 30px;
+	}
+	
+	.top__link{
+		font-size: 28px;
+		max-width: 320px;
+		padding: 8px;
+	}
+	
+	/* Сетка услуг становится 2 колонки */
+	/* Services grid becomes 2 columns */
+	.about__list{
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+	}
+	
+	/* Уменьшаем отступы */
+	/* Reduce paddings */
+	.contacts__text{
+		padding: 0 50px;
+		font-size: 20px;
+	}
+	
+	.contacts__call,
+	.contacts__chat{
+		font-size: 28px;
+		max-width: 100%;
+	}
+	
+	/* Пагинация слайдера */
+	/* Slider pagination */
+	.swiper-pagination-bullet {
+		width: 80px;
+		margin: 0 10px !important;
+	}
+	
+	/* Футер в колонку */
+	/* Footer to column */
+	.footer__menu{
+		flex-direction: column;
+		gap: 30px;
+		align-items: center;
+	}
+}
+
+
+/* ========================================
+   УЛУЧШЕННЫЕ МЕДИА-ЗАПРОСЫ ДЛЯ МОБИЛЬНЫХ
+   IMPROVED MEDIA QUERIES FOR MOBILE
+   Брейкпоинт: 580px (все смартфоны)
+   Breakpoint: 580px (all smartphones)
+   ======================================== */
+
 @media (max-width: 580px){
+	
+	/* БУРГЕР МЕНЮ - без изменений, работает */
+	/* BURGER MENU - no changes, works */
 	.menu__btn{
 		display: flex;
 	}
@@ -346,17 +427,217 @@ color: rgb(66, 112, 172);
 		padding-top: 200px;
 		height: 100vh;
 		transform: translateY(-100%);
+		transition: transform 0.3s ease; /* ДОБАВЛЕНО: плавная анимация меню */
 	}
 	.menu__list.menu__list--active{
 		transform: translateY(0%);
 	}
+	
+	/* ЗАГОЛОВКИ - уменьшаем для мобильных */
+	/* HEADINGS - reduce for mobile */
+	.title{
+		font-size: 32px; /* было 72px! Теперь читаемо */
+		padding-bottom: 20px;
+	}
+	
+	.section-title{
+		font-size: 28px; /* было 48px */
+		margin-bottom: 30px;
+	}
+	
+	/* ВЕРХНИЙ БЛОК */
+	/* TOP BLOCK */
+	.top{
+		padding-top: 80px; /* уменьшил отступ сверху */
+		padding-bottom: 30px;
+	}
+	
+	.top__link{
+		font-size: 20px; /* было 36px - слишком большой! */
+		max-width: 90%; /* адаптивная ширина вместо фиксированной */
+		padding: 10px 15px;
+	}
+	
+	/* ХЕДЕР */
+	/* HEADER */
+	.header__inner{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	
+	/* СЕТКА УСЛУГ - 1 колонка */
+	/* SERVICES GRID - 1 column */
 	.about__list{
 		grid-template-columns: repeat(1, 1fr);
+		gap: 40px;
 	}
-	.footer__copy{
-		min-width: 300px;
+	
+	.about{
+		padding: 30px 0;
 	}
+	
+	/* БЛОК "СВОИМИ РУКАМИ" */
+	/* "OWN HANDS" BLOCK */
+	.own-hands{
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+	
 	.own__hands-item{
-		width: 200px;
+		width: 100%; /* было 200px - теперь на всю ширину! */
+		max-width: 350px; /* но не слишком широко */
+		padding: 19px 0 19px 120px; /* уменьшил левый отступ */
+		margin-left: auto;
+		margin-right: auto; /* центрируем */
+	}
+	
+	.own__hands-item::before{
+		width: 80px; /* было 100px - уменьшил круг с номером */
+		height: 80px;
+		font-size: 36px; /* было 48px */
+	}
+	
+	.own__hands-list{
+		padding: 30px 0 40px;
+	}
+	
+	.own__hands-title{
+		font-size: 20px;
+		padding-top: 30px;
+	}
+	
+	/* КОНТАКТЫ */
+	/* CONTACTS */
+	.contacts{
+		padding: 50px 0 80px;
+	}
+	
+	.contacts__text{
+		padding: 0 20px; /* было 100px - не влезало! */
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+	
+	.contacts__call,
+	.contacts__chat{
+		font-size: 22px; /* было 36px - огромный! */
+		max-width: 90%;
+		padding: 10px 15px;
+		margin: 10px auto;
+		display: block; /* чтобы центрировались */
+	}
+	
+	/* ФУТЕР */
+	/* FOOTER */
+	.footer{
+		padding: 30px 0;
+	}
+	
+	.footer__menu{
+		flex-direction: column;
+		margin-bottom: 30px;
+		gap: 30px;
+	}
+	
+	.footer__menu-title{
+		font-size: 20px;
+		padding-bottom: 15px;
+	}
+	
+	.footer__copy{
+		max-width: 100%; /* было min-width: 800px - не влезало! */
+		padding: 0 20px;
+		font-size: 14px;
+	}
+	
+	/* СЛАЙДЕР */
+	/* SLIDER */
+	.swiper-pagination-bullet {
+		width: 50px; /* уменьшил для мобильных */
+		margin: 0 5px !important;
+	}
+	
+	.swiper-pagination-bullets.swiper-pagination-horizontal{
+		bottom: 30px;
+	}
+	
+	/* КОНТЕЙНЕР */
+	/* CONTAINER */
+	.container{
+		padding: 0 15px; /* увеличил боковые отступы для читаемости */
 	}
 }
+
+
+/* ========================================
+   ДОПОЛНИТЕЛЬНЫЙ БРЕЙКПОИНТ ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ
+   ADDITIONAL BREAKPOINT FOR VERY SMALL SCREENS
+   Брейкпоинт: 360px (маленькие смартфоны)
+   Breakpoint: 360px (small smartphones)
+   ======================================== */
+
+@media (max-width: 360px){
+	.title{
+		font-size: 24px;
+	}
+	
+	.section-title{
+		font-size: 22px;
+	}
+	
+	.top__link,
+	.contacts__call,
+	.contacts__chat{
+		font-size: 18px;
+	}
+	
+	.own__hands-item{
+		padding-left: 100px;
+	}
+	
+	.own__hands-item::before{
+		width: 70px;
+		height: 70px;
+		font-size: 28px;
+	}
+}
+
+
+/* ========================================
+   СПИСОК ВСЕХ ИЗМЕНЕНИЙ / LIST OF ALL CHANGES:
+   ======================================== 
+   
+   ✅ 1. РАСШИРИЛ медиа-запросы:
+      - Добавил @media (max-width: 768px) для планшетов
+      - Улучшил @media (max-width: 580px) для телефонов
+      - Добавил @media (max-width: 360px) для маленьких экранов
+   
+   ✅ 2. УМЕНЬШИЛ огромные шрифты:
+      - .title: 72px → 32px (на мобильных)
+      - .top__link: 36px → 20px
+      - .contacts__call: 36px → 22px
+      - .section-title: 48px → 28px
+   
+   ✅ 3. ИСПРАВИЛ фиксированные ширины:
+      - .footer__copy: min-width: 800px → max-width: 100%
+      - .own__hands-item: width: 200px → width: 100%, max-width: 350px
+      - .top__link: max-width: 390px → max-width: 90%
+   
+   ✅ 4. УМЕНЬШИЛ огромные отступы:
+      - .contacts__text: padding: 0 100px → padding: 0 20px
+      - .container: padding: 0 10px → padding: 0 15px (для читаемости)
+   
+   ✅ 5. АДАПТИРОВАЛ элементы:
+      - Кружки с номерами: 100px → 80px → 70px
+      - Пагинация слайдера: 120px → 80px → 50px
+      - Футер меню: в колонку на мобильных
+   
+   ✅ 6. ДОБАВИЛ плавность:
+      - transition для menu__list
+      - border: none для menu__btn
+   
+   ✅ 7. ЦЕНТРИРОВАНИЕ:
+      - .own__hands-item: margin-left: auto + margin-right: auto
+      - .contacts__call/.contacts__chat: display: block для центрирования
+   
+   ======================================== */
