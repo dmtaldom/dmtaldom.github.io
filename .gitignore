@@ -1,3 +1,16 @@
 _site/
 .jekyll-cache/
-Gemfile.lock
+.jekyll-metadata
+
+# Локальные конфиги редакторов
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+
+# Node modules (if needed)
+node_modules/
