@@ -1,8 +1,9 @@
-<header class="header header-main">
+<header class="header {% if page.url == '/' %}header-main{% endif %}">
     <div class="container">
         <div class="header__inner">
             <a class="logo" href="{{ '/' | relative_url }}">
-                <img class="logo__img" src="img/logo_dmtaldom.png" alt="dmtaldom - аббревиатура латиницей слов дмитров и талдом">
+                <!-- Путь к картинке исправлен на абсолютный через relative_url -->
+                <img class="logo__img" src="{{ '/img/logo_dmtaldom.png' | relative_url }}" alt="dmtaldom - аббревиатура латиницей слов дмитров и талдом">
             </a>
             <nav class="menu">
                 <button class="menu__btn">
@@ -11,9 +12,16 @@
                     <span></span>
                 </button>
                 <ul class="menu__list">
-                    <li class="menu__list-item"><a href="{{ '/' | relative_url }}" class="menu__list-link">Настройка</a></li>
-                    <li class="menu__list-item"><a href="{{ '/installation.html' | relative_url }}" class="menu__list-link">Установка</a></li>
-                    <li class="menu__list-item"><a href="tel:+79857851040" class="menu__list-link">+7(985) 785-10-40</a></li>
+                    <!-- Ссылки исправлены -->
+                    <li class="menu__list-item">
+                        <a href="{{ '/' | relative_url }}" class="menu__list-link {% if page.url == '/' %}menu__list-link--active{% endif %}">Настройка</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="{{ '/installation/' | relative_url }}" class="menu__list-link {% if page.url == '/installation/' %}menu__list-link--active{% endif %}">Установка</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="tel:+79857851040" class="menu__list-link">+7(985) 785-10-40</a>
+                    </li>
                 </ul>
             </nav>
         </div>
