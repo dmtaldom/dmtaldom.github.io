@@ -28,7 +28,7 @@ permalink: /contacts/
             </h2>
             
             <!-- Картинка с исправленным путем -->
-            <img class="own-hands__inner-img" src="{{ '/img/trk56_542.png' | relative_url }}" alt="Настройка Триколор">
+            <img class="own-hands__inner-img" src="{{ '/img/trk_600.png' | relative_url }}" alt="Настройка Триколор">
             
             <h2 class="own__hands-title">
                 <a href="mailto:dmtaldom@yandex.ru">Написать: dmtaldom@yandex.ru</a>
