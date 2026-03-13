@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <meta name="google-site-verification" content="h8xRcWbyXwwdP6Itqtcgk2XZHwW8aigkcyK8bR_NTnQ" />
+    <meta name="yandex-verification" content="8eb0826bfc3e2762" />
+    
+    <!-- Title и Description из Jekyll -->
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="keywords" content="{{ site.keywords }}">
+    
+    <!-- СТИЛИ: ПУТИ ПОД assets/ -->
+    <link rel="stylesheet" href="{{ '/assets/css/swiper-bundle.min.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/favicon/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/favicon/site.webmanifest' | relative_url }}">
+    <link rel="mask-icon" href="{{ '/favicon/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"LocalBusiness","name":"Настройка антенн Дмитров Талдом Дубна","image":"https://dmtaldom.github.io/img/antplate590x200.png","telephone":"+79857851040","url":"https://dmtaldom.github.io","address":{"@type":"PostalAddress","addressRegion":"Московская область","addressLocality":"Дмитров"},"areaServed":[{"@type":"City","name":"Дмитров"},{"@type":"City","name":"Талдом"},{"@type":"City","name":"Дубна"}],"geo":{"@type":"GeoCoordinates","latitude":56.606,"longitude":37.407},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"21:00"},"priceRange":"₽₽"}
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        {% include header.html %}
+        <main class="main">{{ content }}</main>
+        {% include footer.html %}
+    </div>
+    <!-- СКРИПТЫ: ПУТИ ПОД assets/ -->
+    <script src="{{ '/assets/js/swiper-bundle.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

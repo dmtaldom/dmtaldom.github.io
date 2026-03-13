@@ -1,0 +1,31 @@
+# --- Основная информация ---
+title: "Настройка антенн Дмитров, Талдом, Дубна | Мастер с 2010 г."
+description: "Хотите вызвать мастера или настроить антенну своими руками? Краткая инструкция здесь."
+keywords: "настройка антенн, ремонт антенн, установка антенн, нтв+, триколор, мтс, телекарта, DVB-S2, DVB-T2, LTE 4G"
+author: "Мастер по антеннам"
+email: ""  # можно добавить при необходимости
+phone: "+79857851040"
+
+# --- URL и пути ---
+url: "https://dmtaldom.github.io"
+baseurl: ""  # пусто, так как сайт в корне репозитория
+
+# --- Настройки Jekyll ---
+markdown: kramdown
+permalink: pretty
+timezone: "Europe/Moscow"
+lang: "ru"
+
+# --- Исключаемые файлы (не попадут в сборку) ---
+exclude:
+  - ".gitignore"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "vendor"
+  - ".jekyll-cache"
+
+  # --- Плагины (если понадобятся) ---
+# plugins:
+#   - jekyll-seo-tag
+#   - jekyll-sitemap
