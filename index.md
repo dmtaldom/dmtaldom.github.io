@@ -79,7 +79,7 @@ description: "Хотите вызвать мастера или настроит
 <section class="own-hands">
     <div class="container">
         <div class="own-hands__inner">
-            <img class="own-hands__inner-img" src="img/antplate590x200.png" alt="Эфирная и спутниковая антенны">
+            <img class="own-hands__inner-img" src="{{ '/img/dmtaldom_600.png' | relative_url }}"  alt="ЭУстановка и настройка спутниковых и наземных антенн в Дмитрове, Талдоме и Дубне">
             <h2 class="section-title">
                 Настройка своими руками
             </h2>
