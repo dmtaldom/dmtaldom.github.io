@@ -22,12 +22,19 @@
                 <li class="footer__menu-item"><a href="{{ '/' | relative_url }}" class="footer__menu-link">Наземных тв антенн</a></li>
                 <li class="footer__menu-item"><a href="tel:+79857851040" class="footer__menu-link">Вызвать мастера +7(985)785-10-40</a></li>
             </ul>
-            <ul class="footer__menu-list">
-                <li class="footer__menu-item"><p class="footer__menu-title">Установка</p></li>
-                <li class="footer__menu-item"><a href="{{ '/installation/' | relative_url }}" class="footer__menu-link">Наземное тв DVB-T2</a></li>
-                <li class="footer__menu-item"><a href="{{ '/installation/' | relative_url }}" class="footer__menu-link">Спутниковое тв DVB-S2</a></li>
-                <li class="footer__menu-item"><a href="{{ '/installation/' | relative_url }}" class="footer__menu-link">Интернет 4G IPTV</a></li>
-            </ul>
+            <!-- Колонка 3: Установка -->
+<ul class="footer__menu-list">
+    <li class="footer__menu-item"><p class="footer__menu-title">Установка</p></li>
+    <li class="footer__menu-item">
+        <a href="{{ '/installation/' | relative_url }}#dvb-t2" class="footer__menu-link">Наземное тв DVB-T2</a>
+    </li>
+    <li class="footer__menu-item">
+        <a href="{{ '/installation/' | relative_url }}#dvb-s2" class="footer__menu-link">Спутниковое тв DVB-S2</a>
+    </li>
+    <li class="footer__menu-item">
+        <a href="{{ '/installation/' | relative_url }}#iptv" class="footer__menu-link">Интернет 4G IPTV</a>
+    </li>
+</ul>
         </nav>
         <div class="footer__copy">
             <p class="footer__copy-text">
