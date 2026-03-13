@@ -196,7 +196,10 @@ body{
 }
 
 .about__item-img{
-	margin-bottom: 30px;
+	width: 48px;       /* Размер иконки */
+    height: 48px;
+    color: #2563eb;    /* Цвет иконки (синий, можно поменять) */
+    margin-bottom: 1rem;
 }
 
 .about__item-title{

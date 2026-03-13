@@ -36,7 +36,7 @@ description: "Хотите вызвать мастера или настроит
         </h2>
         <ul class="about__list">
             <li class="about__item">
-                <img class="about__item-img" src="img/favicon-32x32.png" alt="Диагностика оборудования и настройка антенн">
+                <img class="about__item-img" src="{{'/img/repair.png' | relative_url }}" alt="Диагностика оборудования и настройка антенн">
                 <h3 class="about__item-title">
                     Диагностика и настройка - от 3000р.
                 </h3>
@@ -50,7 +50,7 @@ description: "Хотите вызвать мастера или настроит
                 </p>
             </li>
             <li class="about__item">
-                <img class="about__item-img" src="img/favicon-32x32.png" alt="Установка антенн и оборудования">
+                <img class="about__item-img" src="{{'/img/wrench-tools.png' | relative_url }}" alt="Установка антенн и оборудования">
                 <h3 class="about__item-title">
                     Демонтаж и установка - от 4500р.
                 </h3>
@@ -60,7 +60,7 @@ description: "Хотите вызвать мастера или настроит
                 </p>
             </li>
             <li class="about__item">
-                <img class="about__item-img" src="img/favicon-32x32.png" alt="Констультация с выездом на объект">
+                <img class="about__item-img" src="{{'/img/info.png' | relative_url }}" alt="Констультация с выездом на объект">
                 <h3 class="about__item-title">
                     Консультация с выездом - 2100р.
                 </h3>
@@ -82,7 +82,7 @@ description: "Хотите вызвать мастера или настроит
             <img class="own-hands__inner-img" src="img/antplate590x200.png" alt="Эфирная и спутниковая антенны">
             <h2 class="section-title">
                 Настройка своими руками
-            </h2>
+            </h2>mg/favi
             <p class="own-hands__text">
                 Из этой краткой инструкции вы узнаете как настроить спутниковую и наземную (эфирную) антенну самостоятельно, без специального оборудования, с помощью штатного ресивера и телевизора. 
                 Для эфирной антенны условия настройки более мягкие, но в целом схожие. 
