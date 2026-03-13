@@ -13,17 +13,34 @@ permalink: /dubna/
             </h1>
             
             <h2 class="own__hands-title">
-                Зона покрытия и карта
+                Территория обслуживания и карта
             </h2>
-
-            <iframe src="https://yandex.ru/map-constructor/..." style="width: 100%; height: 500px; border: 0;" allowfullscreen="true"></iframe>
+            
+            <iframe 
+                src="https://yandex.ru/map-widget/v1/?ll=37.2667%2C56.7333&z=12&l=map" 
+                style="width: 100%; height: 500px; border: 0;" 
+                allowfullscreen="true">
+            </iframe>
             
             <p class="own-hands__text">
-                Выезд в наукоград Дубна и окрестности. Настройка ТВ и интернета.
+                Дубна располагается на границе двух областей, что позволяет выбрать между ретрансляторами Московской и Тверской областей.
+            </p>
+            
+            <h2 class="own__hands-title">
+                Услуги в районе
+            </h2>
+            
+            <p class="own-hands__text">
+                Мастер поможет правильно соорентировать антенну для приема бесплатных цифровых каналов, настроить или установить спутниковую антенну.
             </p>
             
             <p class="own-hands__text">
-                Для заказа звоните: <a href="tel:+79857851040" style="color: inherit; text-decoration: underline;">+7 (985) 785-10-40</a>
+                Стоимость выезда и диагностики от 3000р. 
+                Точную цену назовет мастер после уточнения адреса.
+            </p>
+
+            <p class="own-hands__text">
+                Оставьте заявку: <a href="tel:+79857851040" style="color: inherit; text-decoration: underline;">+7 (985) 785-10-40</a>
             </p>
         </div>
     </div>
