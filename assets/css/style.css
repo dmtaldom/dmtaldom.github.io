@@ -385,6 +385,10 @@ body{
 		margin: 0 10px !important;
 	}
 	
+	.swiper-slide {
+        height: 250px;              /* Уменьшаем высоту на мобильном */
+        background-size: contain;   /* Сохраняем пропорции */
+    }
 	/* Футер в колонку */
 	/* Footer to column */
 	.footer__menu{
