@@ -12,6 +12,22 @@
     <!-- Title и Description из Jekyll -->
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:image" content="{{ '/img/dmtaldom_600.png' | absolute_url }}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:image" content="{{ '/img/dmtaldom_600.png' | absolute_url }}">
     <meta name="keywords" content="{{ site.keywords }}">
     
     <!-- СТИЛИ: ПУТИ ПОД assets/ -->
@@ -27,10 +43,51 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"LocalBusiness","name":"Настройка антенн Дмитров Талдом Дубна","image":"https://dmtaldom.github.io/img/antplate590x200.png","telephone":"+79857851040","url":"https://dmtaldom.github.io","address":{"@type":"PostalAddress","addressRegion":"Московская область","addressLocality":"Дмитров"},"areaServed":[{"@type":"City","name":"Дмитров"},{"@type":"City","name":"Талдом"},{"@type":"City","name":"Дубна"}],"geo":{"@type":"GeoCoordinates","latitude":56.606,"longitude":37.407},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"21:00"},"priceRange":"₽₽"}
-    </script>
+    <!-- JSON-LD: LocalBusiness Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Настройка антенн Дмитров Талдом Дубна",
+  "image": "https://dmtaldom.github.io/img/dmtaldom_600.png",
+  "telephone": "+79857851040",
+  "url": "https://dmtaldom.github.io",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Московская область",
+    "addressLocality": "Дмитров"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Дмитров"},
+    {"@type": "City", "name": "Талдом"},
+    {"@type": "City", "name": "Дубна"}
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 56.606,
+    "longitude": 37.407
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00",
+    "closes": "21:00"
+  },
+  "priceRange": "₽₽",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Услуги по настройке ТВ",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Установка спутниковой антенны"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Настройка Триколор"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Настройка НТВ+"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Подключение МТС ТВ"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Настройка эфирного цифрового ТВ (DVB-T2)"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Консультация и выезд к клиенту"}}
+    ]
+  }
+}
+</script>
 </head>
 <body>
     <div class="wrapper">
