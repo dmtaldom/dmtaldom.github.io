@@ -1,0 +1,10 @@
+# robots.txt для dmtaldom.github.io
+User-agent: *
+Allow: /
+
+# Запрет служебных путей
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Ссылка на sitemap
+Sitemap: https://dmtaldom.github.io/sitemap.xml

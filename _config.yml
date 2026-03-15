@@ -26,6 +26,7 @@ exclude:
   - ".jekyll-cache"
 
   # --- Плагины (если понадобятся) ---
-# plugins:
+plugins:
 #   - jekyll-seo-tag
 #   - jekyll-sitemap
+  - jekyll-sitemap
