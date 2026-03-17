@@ -1,6 +1,6 @@
 /* ========================================
-   ОРИГИНАЛЬНЫЕ СТИЛИ (БЕЗ ИЗМЕНЕНИЙ)
-   ORIGINAL STYLES (NO CHANGES)
+   ОРИГИНАЛЬНЫЕ СТИЛИ (С ИСПРАВЛЕНИЯМИ)
+   ORIGINAL STYLES (WITH FIXES)
    ======================================== */
 
 html{
@@ -41,6 +41,7 @@ a{
 	max-width: 1220px;
 	margin: 0 auto;
 	padding: 0 10px;
+	/* overflow: visible; - по умолчанию, можно не добавлять */
 }
 
 body{
@@ -114,8 +115,6 @@ body{
 }
 
 .footer__copy{
-	/* ИЗМЕНЕНО: убрал min-width чтобы работало на мобильных */
-	/* CHANGED: removed min-width to work on mobile */
 	max-width: 800px;
 	margin: 0 auto;
 	text-align: center;
@@ -161,7 +160,7 @@ body{
 
 .swiper-slide{
 	background-repeat: no-repeat;
-	block-size: cover;
+	background-size: cover;  /* ✅ ИСПРАВЛЕНО: было block-size */
 	background-position: center;
 	height: 100vh;
 }
@@ -196,10 +195,10 @@ body{
 }
 
 .about__item-img{
-	width: 48px;       /* Размер иконки */
-    height: 48px;
-    color: #2563eb;    /* Цвет иконки (синий, можно поменять) */
-    margin-bottom: 1rem;
+	width: 48px;
+	height: 48px;
+	color: #2563eb;
+	margin-bottom: 1rem;
 }
 
 .about__item-title{
@@ -225,10 +224,11 @@ body{
 
 .own-hands__inner-img{
 	margin: 0 auto;
-	padding-bottom: 3.125rem;
+	margin-bottom: 3.125rem;  /* ✅ ИСПРАВЛЕНО: было padding-bottom */
 	display: block;
 	width: 100%;
 	border-radius: 0.5rem;
+	overflow: hidden;  /* ✅ ДОБАВЛЕНО: гарантирует закругление */
 }
 
 .own__hands-title{
@@ -323,7 +323,7 @@ body{
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 0;
-	border: none; /* ДОБАВЛЕНО: убрал рамку кнопки / ADDED: removed button border */
+	border: none;
 	background-color: transparent;
 	cursor: pointer;
 	display: none;
@@ -340,21 +340,16 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Компенсация фиксированной шапки (если есть) */
+/* Компенсация фиксированной шапки */
 #dvb-t2, #dvb-s2, #iptv {
-    scroll-margin-top: 50px; /* Подбери значение под высоту своей шапки */
+    scroll-margin-top: 50px;
 }
 
 /* ========================================
-   НОВЫЕ МЕДИА-ЗАПРОСЫ ДЛЯ ПЛАНШЕТОВ
-   NEW MEDIA QUERIES FOR TABLETS
-   Брейкпоинт: 768px (большинство планшетов)
-   Breakpoint: 768px (most tablets)
+   МЕДИА-ЗАПРОСЫ ДЛЯ ПЛАНШЕТОВ (768px)
    ======================================== */
 
 @media (max-width: 768px){
-	/* Уменьшаем заголовки для планшетов */
-	/* Reduce headings for tablets */
 	.section-title{
 		font-size: 36px;
 		margin-bottom: 30px;
@@ -371,15 +366,11 @@ html {
 		padding: 8px;
 	}
 	
-	/* Сетка услуг становится 2 колонки */
-	/* Services grid becomes 2 columns */
 	.about__list{
 		grid-template-columns: repeat(2, 1fr);
 		gap: 40px;
 	}
 	
-	/* Уменьшаем отступы */
-	/* Reduce paddings */
 	.contacts__text{
 		padding: 0 50px;
 		font-size: 20px;
@@ -391,19 +382,16 @@ html {
 		max-width: 100%;
 	}
 	
-	/* Пагинация слайдера */
-	/* Slider pagination */
 	.swiper-pagination-bullet {
 		width: 80px;
 		margin: 0 10px !important;
 	}
 	
 	.swiper-slide {
-        height: 250px;              /* Уменьшаем высоту на мобильном */
-        background-size: contain;   /* Сохраняем пропорции */
+        height: 250px;
+        background-size: contain;
     }
-	/* Футер в колонку */
-	/* Footer to column */
+	
 	.footer__menu{
 		flex-direction: column;
 		gap: 30px;
@@ -411,18 +399,12 @@ html {
 	}
 }
 
-
 /* ========================================
-   УЛУЧШЕННЫЕ МЕДИА-ЗАПРОСЫ ДЛЯ МОБИЛЬНЫХ
-   IMPROVED MEDIA QUERIES FOR MOBILE
-   Брейкпоинт: 580px (все смартфоны)
-   Breakpoint: 580px (all smartphones)
+   МЕДИА-ЗАПРОСЫ ДЛЯ МОБИЛЬНЫХ (580px)
    ======================================== */
 
 @media (max-width: 580px){
 	
-	/* БУРГЕР МЕНЮ - без изменений, работает */
-	/* BURGER MENU - no changes, works */
 	.menu__btn{
 		display: flex;
 	}
@@ -444,46 +426,38 @@ html {
 		padding-top: 200px;
 		height: 100vh;
 		transform: translateY(-100%);
-		transition: transform 0.3s ease; /* ДОБАВЛЕНО: плавная анимация меню */
+		transition: transform 0.3s ease;
 	}
 	.menu__list.menu__list--active{
 		transform: translateY(0%);
 	}
 	
-	/* ЗАГОЛОВКИ - уменьшаем для мобильных */
-	/* HEADINGS - reduce for mobile */
 	.title{
-		font-size: 32px; /* было 72px! Теперь читаемо */
+		font-size: 32px;
 		padding-bottom: 20px;
 	}
 	
 	.section-title{
-		font-size: 28px; /* было 48px */
+		font-size: 28px;
 		margin-bottom: 30px;
 	}
 	
-	/* ВЕРХНИЙ БЛОК */
-	/* TOP BLOCK */
 	.top{
-		padding-top: 80px; /* уменьшил отступ сверху */
+		padding-top: 80px;
 		padding-bottom: 30px;
 	}
 	
 	.top__link{
-		font-size: 20px; /* было 36px - слишком большой! */
-		max-width: 90%; /* адаптивная ширина вместо фиксированной */
+		font-size: 20px;
+		max-width: 90%;
 		padding: 10px 15px;
 	}
 	
-	/* ХЕДЕР */
-	/* HEADER */
 	.header__inner{
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
 	
-	/* СЕТКА УСЛУГ - 1 колонка */
-	/* SERVICES GRID - 1 column */
 	.about__list{
 		grid-template-columns: repeat(1, 1fr);
 		gap: 40px;
@@ -493,25 +467,23 @@ html {
 		padding: 30px 0;
 	}
 	
-	/* БЛОК "СВОИМИ РУКАМИ" */
-	/* "OWN HANDS" BLOCK */
 	.own-hands{
 		padding-top: 30px;
 		padding-bottom: 50px;
 	}
 	
 	.own__hands-item{
-		width: 100%; /* было 200px - теперь на всю ширину! */
-		max-width: 350px; /* но не слишком широко */
-		padding: 19px 0 19px 120px; /* уменьшил левый отступ */
+		width: 100%;
+		max-width: 350px;
+		padding: 19px 0 19px 120px;
 		margin-left: auto;
-		margin-right: auto; /* центрируем */
+		margin-right: auto;
 	}
 	
 	.own__hands-item::before{
-		width: 80px; /* было 100px - уменьшил круг с номером */
+		width: 80px;
 		height: 80px;
-		font-size: 36px; /* было 48px */
+		font-size: 36px;
 	}
 	
 	.own__hands-list{
@@ -523,29 +495,25 @@ html {
 		padding-top: 30px;
 	}
 	
-	/* КОНТАКТЫ */
-	/* CONTACTS */
 	.contacts{
 		padding: 50px 0 80px;
 	}
 	
 	.contacts__text{
-		padding: 0 20px; /* было 100px - не влезало! */
+		padding: 0 20px;
 		font-size: 18px;
 		margin-bottom: 30px;
 	}
 	
 	.contacts__call,
 	.contacts__chat{
-		font-size: 22px; /* было 36px - огромный! */
+		font-size: 22px;
 		max-width: 90%;
 		padding: 10px 15px;
 		margin: 10px auto;
-		display: block; /* чтобы центрировались */
+		display: block;
 	}
 	
-	/* ФУТЕР */
-	/* FOOTER */
 	.footer{
 		padding: 30px 0;
 	}
@@ -562,15 +530,13 @@ html {
 	}
 	
 	.footer__copy{
-		max-width: 100%; /* было min-width: 800px - не влезало! */
+		max-width: 100%;
 		padding: 0 20px;
 		font-size: 14px;
 	}
 	
-	/* СЛАЙДЕР */
-	/* SLIDER */
 	.swiper-pagination-bullet {
-		width: 50px; /* уменьшил для мобильных */
+		width: 50px;
 		margin: 0 5px !important;
 	}
 	
@@ -578,19 +544,13 @@ html {
 		bottom: 30px;
 	}
 	
-	/* КОНТЕЙНЕР */
-	/* CONTAINER */
 	.container{
-		padding: 0 15px; /* увеличил боковые отступы для читаемости */
+		padding: 0 15px;
 	}
 }
 
-
 /* ========================================
-   ДОПОЛНИТЕЛЬНЫЙ БРЕЙКПОИНТ ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ
-   ADDITIONAL BREAKPOINT FOR VERY SMALL SCREENS
-   Брейкпоинт: 360px (маленькие смартфоны)
-   Breakpoint: 360px (small smartphones)
+   МЕДИА-ЗАПРОСЫ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ (360px)
    ======================================== */
 
 @media (max-width: 360px){
@@ -618,43 +578,3 @@ html {
 		font-size: 28px;
 	}
 }
-
-
-/* ========================================
-   СПИСОК ВСЕХ ИЗМЕНЕНИЙ / LIST OF ALL CHANGES:
-   ======================================== 
-   
-   ✅ 1. РАСШИРИЛ медиа-запросы:
-      - Добавил @media (max-width: 768px) для планшетов
-      - Улучшил @media (max-width: 580px) для телефонов
-      - Добавил @media (max-width: 360px) для маленьких экранов
-   
-   ✅ 2. УМЕНЬШИЛ огромные шрифты:
-      - .title: 72px → 32px (на мобильных)
-      - .top__link: 36px → 20px
-      - .contacts__call: 36px → 22px
-      - .section-title: 48px → 28px
-   
-   ✅ 3. ИСПРАВИЛ фиксированные ширины:
-      - .footer__copy: min-width: 800px → max-width: 100%
-      - .own__hands-item: width: 200px → width: 100%, max-width: 350px
-      - .top__link: max-width: 390px → max-width: 90%
-   
-   ✅ 4. УМЕНЬШИЛ огромные отступы:
-      - .contacts__text: padding: 0 100px → padding: 0 20px
-      - .container: padding: 0 10px → padding: 0 15px (для читаемости)
-   
-   ✅ 5. АДАПТИРОВАЛ элементы:
-      - Кружки с номерами: 100px → 80px → 70px
-      - Пагинация слайдера: 120px → 80px → 50px
-      - Футер меню: в колонку на мобильных
-   
-   ✅ 6. ДОБАВИЛ плавность:
-      - transition для menu__list
-      - border: none для menu__btn
-   
-   ✅ 7. ЦЕНТРИРОВАНИЕ:
-      - .own__hands-item: margin-left: auto + margin-right: auto
-      - .contacts__call/.contacts__chat: display: block для центрирования
-   
-   ======================================== */
