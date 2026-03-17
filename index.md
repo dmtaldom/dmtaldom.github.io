@@ -79,7 +79,7 @@ description: "Профессиональная настройка спутник
 <section class="own-hands">
     <div class="container">
         <div class="own-hands__inner">
-            <img class="own-hands__inner-img" src="{{ '/img/dmtaldom_600.png' | relative_url }}"  alt="Установка и настройка спутниковых и наземных антенн в Дмитрове, Талдоме и Дубне">
+            <img class="own-hands__inner-img" src="{{ '/img/dmtaldom_irom_600.png' | relative_url }}"  alt="Установка и настройка спутниковых и наземных антенн в Дмитрове, Талдоме и Дубне">
             <h2 class="section-title">
                 Настройка антенны своими руками
             </h2>
