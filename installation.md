@@ -79,7 +79,7 @@ permalink: /installation/
             <div class="cta-box" style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 8px; text-align: center;">
                 <h3 style="margin-bottom: 15px;">Нужна помощь с выбором или установкой?</h3>
                 <p style="margin-bottom: 15px;">
-                    Позвоните мастеру — проконсультирую по оборудованию и рассчитаю точную стоимость для вашего адреса.
+                    Позвоните мастеру — проконсультирую по оборудованию и рассчитаю точную стоимость для вас.
                 </p>
                 <a href="tel:+79857851040" style="display: inline-block; padding: 12px 24px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">
                     📞 +7 (985) 785-10-40
