@@ -54,7 +54,7 @@ permalink: /contacts/
                 </h2>
                 <ul style="list-style: none; padding: 0; margin: 0;">
                     <li style="margin: 8px 0;">✅ Выезд в день обращения (по возможности)</li>
-                    <li style="margin: 8px 0;">✅ Стоимость вышедшего из строя оборудования не входит в диагностику</li>
+                    <li style="margin: 8px 0;">✅ Вышедшеe из строя оборудование оплачивается дополнительно</li>
                     <li style="margin: 8px 0;">✅ Гарантия на оборудование от производителя</li>
                 </ul>
             </div>
