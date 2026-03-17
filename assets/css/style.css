@@ -225,9 +225,10 @@ body{
 
 .own-hands__inner-img{
 	margin: 0 auto;
-	padding-bottom: 50px;
+	padding-bottom: 3.125rem;
 	display: block;
 	width: 100%;
+	border-radius: 0.5rem;
 }
 
 .own__hands-title{
