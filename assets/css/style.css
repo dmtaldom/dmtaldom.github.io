@@ -578,3 +578,29 @@ html {
 		font-size: 28px;
 	}
 }
+/* FAQ - минимальные отступы */
+.faq,
+.faq .container,
+.faq .own-hands__inner {
+    padding-top: 40px;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.faq .section-title {
+    margin-bottom: 15px;
+}
+
+.faq .own__hands-title {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.faq .own-hands__text {
+    margin-bottom: 10px;
+}
+
+.faq .own-hands__text:last-child {
+    margin-bottom: 0;
+}

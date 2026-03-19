@@ -114,4 +114,61 @@ description: "Профессиональная настройка спутник
             </p>
         </div>
     </div>
+ <!-- Секция FAQ -->
+<section class="faq">
+    <div class="container">
+        <div class="own-hands__inner">
+            <h2 class="section-title">
+                Частые вопросы
+            </h2>
+            
+            <div itemscope itemtype="https://schema.org/FAQPage">
+                <!-- Вопрос 1 -->
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="own__hands-title" itemprop="name">
+                        Сколько стоит выезд мастера в Дмитров, Талдом, Дубну?
+                    </h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="own-hands__text" itemprop="text">
+                            Выезд в пределах Дмитрова, Талдома и Дубны — бесплатный при заказе установки. 
+                            Диагностика — от 3000₽, итоговая стоимость зависит от типа антенны и сложности работ.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Вопрос 2 -->
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="own__hands-title" itemprop="name">
+                        Какой оператор лучше: Триколор, НТВ+ или МТС?
+                    </h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="own-hands__text" itemprop="text">
+                            Зависит от ваших задач: Триколор — самый популярный, НТВ+ — много кино, МТС — гибкие тарифы. 
+                            Позвоните — помогу подобрать под ваш дом и бюджет.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Вопрос 3 -->
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="own__hands-title" itemprop="name">
+                        Можно ли настроить антенну самостоятельно?
+                    </h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="own-hands__text" itemprop="text">
+                            Да, если есть прямая видимость спутника или ретранслятора и базовые навыки. 
+                            Но для точной настройки сигнала и гарантии качества лучше вызвать мастера.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Перелинковка -->
+            <p class="own-hands__text" style="text-align: center; margin-top: 30px;">
+                Остались вопросы? 
+                <a href="{{ '/contacts/' | relative_url }}" style="color: inherit; text-decoration: underline;">Свяжитесь со мной →</a>
+            </p>
+        </div>
+    </div>
+</section>   
 </section>
